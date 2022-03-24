@@ -1,0 +1,671 @@
+{
+	"info": {
+		"_postman_id": "40832847-d4ab-4fc9-a775-b3711697accc",
+		"name": "Leboncoin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ANNONCE",
+			"item": [
+				{
+					"name": "UpdateAnnonce",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "6239f9cb7563c7edd95ec70d",
+									"type": "text"
+								},
+								{
+									"key": "titre",
+									"value": "iphone2",
+									"type": "text"
+								},
+								{
+									"key": "prix",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2022-03-22T15:44:06.329+00:00",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "tres bon MP4",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "offre",
+									"type": "text"
+								},
+								{
+									"key": "categorie",
+									"value": "multimedia",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5577/annonce/annonceUpdate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"annonce",
+								"annonceUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CategorieAnnonce",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "categorie",
+									"value": "voiture",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5577/annonce/getByCategorie",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"annonce",
+								"getByCategorie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by Localisation - Annonce",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ville",
+									"value": "Paris",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5577/annonce/getByLocalisation",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"annonce",
+								"getByLocalisation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addAnnonce",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id_user",
+									"value": "62346bf5b1adb9cbe32f8db3",
+									"type": "text"
+								},
+								{
+									"key": "id_localisation",
+									"value": "623c35a69f1147f837600f45",
+									"type": "text"
+								},
+								{
+									"key": "titre",
+									"value": "Chateau ",
+									"type": "text"
+								},
+								{
+									"key": "prix",
+									"value": "8000",
+									"type": "text"
+								},
+								{
+									"key": "date_heure",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "grosse batisse rénovée",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "offre",
+									"type": "text"
+								},
+								{
+									"key": "categorie",
+									"value": "immobilier",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5577/annonce/addAnnonce",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"annonce",
+								"addAnnonce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Annonce",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:5577/annonce/getAllAnnonce",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"annonce",
+								"getAllAnnonce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Annonce",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "623c3dd40c2f74ace51feeab",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5577/annonce/annonceRemove",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"annonce",
+								"annonceRemove"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nom",
+									"value": "Grillade",
+									"type": "text"
+								},
+								{
+									"key": "prenom",
+									"value": "Hogu",
+									"type": "text"
+								},
+								{
+									"key": "addresse",
+									"value": "15 rue des marroniers",
+									"type": "text"
+								},
+								{
+									"key": "mail",
+									"value": "hoguduturfu@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "74",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0641789536",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5577/user/addUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"user",
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "6239eb923cb8b2d1dc088afb",
+									"type": "text"
+								},
+								{
+									"key": "nom",
+									"value": "grillade",
+									"type": "text"
+								},
+								{
+									"key": "prenom",
+									"value": "hogu",
+									"type": "text"
+								},
+								{
+									"key": "addresse",
+									"value": "14 rue du chesne",
+									"type": "text"
+								},
+								{
+									"key": "mail",
+									"value": "55454646@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "5555",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0745843214",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5577/user/userUpdate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"user",
+								"userUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserGetId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5577/user/getById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"user",
+								"getById"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "623c3b930c2f74ace51feea7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5577/user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:5577/user/getAllUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"user",
+								"getAllUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MESSAGE",
+			"item": [
+				{
+					"name": "Add Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id_user1",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "id_user2",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "id_annonce",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5577/message/addMessage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"message",
+								"addMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Message By Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5577/message/getTextById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"message",
+								"getTextById"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LOCALISATION",
+			"item": [
+				{
+					"name": "addLocalisation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ville",
+									"value": "Tours",
+									"type": "text"
+								},
+								{
+									"key": "postalCode",
+									"value": "37000",
+									"type": "text"
+								},
+								{
+									"key": "region",
+									"value": "centre",
+									"type": "text"
+								},
+								{
+									"key": "pays",
+									"value": "France",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5577/localisation/addLocalisation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"localisation",
+								"addLocalisation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Localisation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "623c37fe0c2f74ace51feea2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5577/localisation/removeLocalisation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"localisation",
+								"removeLocalisation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Localisation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "623c38550c2f74ace51feea3",
+									"type": "text"
+								},
+								{
+									"key": "ville",
+									"value": "lyon",
+									"type": "text"
+								},
+								{
+									"key": "postalCode",
+									"value": "69000",
+									"type": "text"
+								},
+								{
+									"key": "region",
+									"value": "bretagne",
+									"type": "text"
+								},
+								{
+									"key": "pays",
+									"value": "France",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5577/localisation/updateLocalisation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5577",
+							"path": [
+								"localisation",
+								"updateLocalisation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
